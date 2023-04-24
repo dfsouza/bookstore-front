@@ -20,7 +20,7 @@ $bookstore-front-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$bookstore-front-theme: mat.define-light-theme((
+$bookstore-front-theme: mat.define-dark-theme((
   color: (
     primary: $bookstore-front-primary,
     accent: $bookstore-front-accent,
