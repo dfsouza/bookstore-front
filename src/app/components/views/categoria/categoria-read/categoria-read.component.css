@@ -17,3 +17,16 @@
 .table{
     width: 100%;
 }
+
+.edit{
+   color: rgb(206, 173, 24);
+}
+
+.delete {
+    color: rgb(228, 56, 56);
+    margin-left: 5rem;
+}
+
+.mat-header{
+    width: 5rem;
+}

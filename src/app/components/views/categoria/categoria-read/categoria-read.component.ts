@@ -13,9 +13,8 @@ displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
 
   constructor(private service: CategoriaService) { }
 
-
   ngOnInit(): void {
-    this.findAll;
+    this.findAll();
   }
 
   findAll(){
