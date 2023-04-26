@@ -16,6 +16,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 import { importExpr } from '@angular/compiler/src/output/output_ast';
 
 @NgModule({
@@ -37,6 +38,7 @@ import { importExpr } from '@angular/compiler/src/output/output_ast';
     MatIconModule,
     MatCardModule,
     MatTableModule,
+    MatButtonModule,
     HttpClientModule
   ],
   providers: [],
