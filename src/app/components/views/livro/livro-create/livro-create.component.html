@@ -2,22 +2,25 @@
     <h1>CRIANDO NOVO CATEGORIA</h1>
 
     <mat-form-field class="form">
-        <mat-label>Nome</mat-label>
-        <input matInput type="text" name="titulo" placeholder="Ex. Curso de Spring Boot com Angular 10" maxlength="100">
+        <mat-label>Titulo</mat-label>
+        <input matInput [formControl]="titulo" required type="text" name="titulo" placeholder="Ex. Curso de Spring Boot com Angular 10" maxlength="100">
+        <mat-error *ngIf="titulo.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form">
-        <mat-label>Titulo</mat-label>
-        <textarea matInput type="text" name="nome_autor" placeholder="Ex. Valdir Cezar" maxlength="100"></textarea>
+        <mat-label>Nome do autor</mat-label>
+        <textarea matInput [formControl]="nome_autor" required type="text" name="nome_autor" placeholder="Ex. Valdir Cezar" maxlength="100"></textarea>
+        <mat-error *ngIf="nome_autor.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Texto</mat-label>
-        <textarea matInput type="text" name="texto" placeholder="Ex. Loorem ipsum" maxlength="2000000"></textarea>
+        <textarea matInput [formControl]="texto" required type="text" name="texto" placeholder="Ex. Loorem ipsum" maxlength="2000000"></textarea>
+        <mat-error *ngIf="texto.invalid">{{ getMessage() }}</mat-error>
     </mat-form-field>
 
     <div class="buttons">
-        <button class='mat-elevation-z8' mat-stroked-button color="primary">CRIAR</button>
+        <button [disabled]="getMessage()" class='mat-elevation-z8' mat-stroked-button color="primary">CRIAR</button>
         <button class = 'mat-elevation-z8' mat-stroked-button color="warn">CANCELAR</button>
     </div>
 </form>
